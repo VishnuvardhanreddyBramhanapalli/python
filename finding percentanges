@@ -1,0 +1,10 @@
+n=int(input())
+student={}
+for i in range(n):
+    name,*marks=input().split()
+    marks=list(map(float,marks))
+    student[name]=marks
+query_name=input()
+marks=student[query_name]
+average=sum(marks)/len(marks)
+print(f"{average:.2f}")
