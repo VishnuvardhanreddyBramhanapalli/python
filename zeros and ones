@@ -1,0 +1,5 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n=tuple(map(int,input().split()))
+import numpy
+print(numpy.zeros((n),dtype=numpy.int))
+print(numpy.ones((n),dtype=numpy.int))
