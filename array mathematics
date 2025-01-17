@@ -1,0 +1,19 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+N,M=map(int,input().split())
+a=[]
+b=[]
+for i in range(N):
+    rows=list(map(int,input().split()))
+    a.append(rows)
+for i in range(N):
+    rows=list(map(int,input().split()))
+    b.append(rows)
+import numpy
+a=numpy.array((a),int)
+b=numpy.array((b),int)
+print(numpy.add(a,b))                     
+print(numpy.subtract(a, b))
+print(numpy.multiply(a, b))
+print(numpy.floor_divide(a, b))
+print(numpy.mod(a, b))
+print(numpy.power(a,b))
