@@ -1,0 +1,12 @@
+from collections import OrderedDict
+def merge_the_tools(string, k):
+    n=len(string)
+    a=0
+    while a<n:
+        word=''.join(OrderedDict.fromkeys(string[a:a+k]))
+        a=a+k
+        print(word)   # your code goes here
+
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
