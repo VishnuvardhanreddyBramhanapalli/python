@@ -1,0 +1,25 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+def comb(n,r):
+    if r>n:
+        return 0
+    elif r==0 or r==n:
+        return 1
+    num=1
+    denum=1
+    for i in range(r):
+        num=num*(n-i)
+        denum=denum*(i+1)
+    return num//denum
+n=int(input())
+letters=input().split()
+r=int(input())
+num_a=letters.count('a')
+total_combinations=comb(n,r)
+no_a=n-num_a
+if no_a>=r:
+    no_a_combinations=comb(no_a,r)
+else:
+    no_a_combinations=0
+valid_combination=total_combinations-no_a_combinations
+probability=valid_combination/total_combinations
+print(f"{probability:.4f}")
